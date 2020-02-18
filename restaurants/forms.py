@@ -13,12 +13,10 @@ class RestaurantForm(forms.ModelForm):
         	'closing_time': forms.TimeInput(attrs={'type':'time'}),
         }
 
-
 class ItemForm(forms.ModelForm):
     class Meta:
         model = Item
         exclude = ['restaurant',]
-
 
 class SignupForm(forms.ModelForm):
     class Meta:
@@ -28,7 +26,6 @@ class SignupForm(forms.ModelForm):
         widgets={
         'password': forms.PasswordInput(),
         }
-
 
 class SigninForm(forms.Form):
     username = forms.CharField(required=True)
